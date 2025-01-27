@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Business Form</title>
+  <title>Contact Us</title>
   <style>
     body {
-      font-family: sans-serif;
+      font-family: 'Open Sans', sans-serif;
       margin: 20px;
+      background-color: #f0f0f0;
+      color: #555;
     }
 
     h1 {
       text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     label {
       display: block;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
 
     input[type="text"],
@@ -27,12 +39,27 @@
     input[type="week"],
     input[type="month"],
     input[type="number"],
-    input[type="search"] {
-      width: 250px;
-      padding: 8px;
-      margin-bottom: 15px;
+    input[type="search"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 16px;
+      height: 150px;
+      resize: vertical;
     }
 
     input[type="submit"],
@@ -40,10 +67,11 @@
     input[type="button"] {
       background-color: #4CAF50;
       color: white;
-      padding: 10px 20px;
+      padding: 15px 25px;
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      font-size: 16px;
     }
 
     input[type="submit"]:hover,
@@ -51,86 +79,40 @@
     input[type="button"]:hover {
       background-color: #45a049;
     }
+
+    .form-group {
+      margin-bottom: 25px;
+    }
   </style>
 </head>
 <body>
 
-  <h1>Business Form</h1>
+  <h1>Get in Touch</h1>
 
   <form>
-    <label for="fname">First Name:</label><br>
-    <input type="text" id="fname" name="fname"><br><br>
+    <div class="form-group">
+      <label for="fname">Full Name:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="Enter your full name">
+    </div>
 
-    <label for="lname">Last Name:</label><br>
-    <input type="text" id="lname" name="lname"><br><br>
+    <div class="form-group">
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your email address">
+    </div>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email"><br><br>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+    </div>
 
-    <label for="phone">Phone:</label><br>
-    <input type="tel" id="phone" name="phone"><br><br>
+    <div class="form-group">
+      <label for="message">Your Message:</label><br>
+      <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+    </div>
 
-    <label for="website">Website:</label><br>
-    <input type="url" id="website" name="website"><br><br>
-
-    <label for="birthday">Birthday:</label><br>
-    <input type="date" id="birthday" name="birthday"><br><br>
-
-    <label for="meeting_time">Meeting Time:</label><br>
-    <input type="time" id="meeting_time" name="meeting_time"><br><br>
-
-    <label for="start_date">Start Date:</label><br>
-    <input type="date" id="start_date" name="start_date"><br><br>
-
-    <label for="end_date">End Date:</label><br>
-    <input type="date" id="end_date" name="end_date"><br><br>
-
-    <label for="meeting_datetime">Meeting Date & Time:</label><br>
-    <input type="datetime-local" id="meeting_datetime" name="meeting_datetime"><br><br>
-
-    <label for="week">Week:</label><br>
-    <input type="week" id="week" name="week"><br><br>
-
-    <label for="month">Month:</label><br>
-    <input type="month" id="month" name="month"><br><br>
-
-    <label for="quantity">Quantity:</label><br>
-    <input type="number" id="quantity" name="quantity" min="0"><br><br>
-
-    <label for="color">Color:</label><br>
-    <input type="color" id="color" name="color"><br><br>
-
-    <label for="file">Upload File:</label><br>
-    <input type="file" id="file" name="file"><br><br>
-
-    <label for="image">Choose an image:</label><br>
-    <input type="image" src="submit.png" alt="Submit" width="30" height="30"><br><br>
-
-    <label for="search">Search:</label><br>
-    <input type="search" id="search" name="search"><br><br>
-
-    <p>Select your preferences:</p>
-    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-    <label for="vehicle1"> Bike</label><br>
-    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
-    <label for="vehicle2"> Car</label><br>
-    <input type="checkbox" id="vehicle3" name="vehicle3" value="Truck">
-    <label for="vehicle3"> Truck</label><br><br>
-
-    <p>Gender:</p>
-    <input type="radio" id="male" name="gender" value="male">
-    <label for="male"> Male</label><br>
-    <input type="radio" id="female" name="gender" value="female">
-    <label for="female"> Female</label><br>
-    <input type="radio" id="other" name="gender" value="other">
-    <label for="other"> Other</label><br><br>
-
-    <label for="volume">Volume:</label><br>
-    <input type="range" id="volume" name="volume" min="0" max="100"><br><br>
-
-    <input type="submit" value="Submit">
-    <input type="reset" value="Reset">
-    <input type="button" value="Click Me">
+    <div class="form-group">
+      <input type="submit" value="Send Message">
+    </div>
 
   </form>
 
