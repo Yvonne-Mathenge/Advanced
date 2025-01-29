@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USIU Advanced Web Development Evaluation Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>USIU Advanced Web Development Evaluation Form</h1>
+
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="studentID">Student ID:</label>
+            <input type="text" id="studentID" name="studentID" placeholder="Enter your USIU Student ID" required>
+
+            <label for="email">USIU Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your USIU email" required>
+
+            <label for="github">GitHub Profile URL:</label>
+            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL" required>
+
+            <label for="phone">Local Phone Number (WhatsApp-enabled):</label>
+            <input type="tel" id="phone" name="phone" placeholder="+2547XX-XXX-XXX" required>
+
+            <label for="problemSolving">1. Nairobi-Specific Problem Solving:</label>
+            <textarea id="problemSolving" name="problemSolving" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
+
+            <label for="jsFramework">2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
+            <select id="jsFramework" name="jsFramework">
+                <option value="React.js">React.js</option>
+                <option value="Vue.js">Vue.js</option>
+                <option value="Angular">Angular</option>
+                <option value="Svelte">Svelte</option>
+            </select>
+
+            <label>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
+            <div class="radio-group">
+                <input type="radio" id="databaseCaching" name="laravelOptimization" value="Database Caching">
+                <label for="databaseCaching">Database Caching</label>
+
+                <input type="radio" id="jobScheduling" name="laravelOptimization" value="Queues & Job Scheduling" checked>
+                <label for="jobScheduling">Queues & Job Scheduling</label>
+
+                <input type="radio" id="horizontalScaling" name="laravelOptimization" value="Horizontal Scaling">
+                <label for="horizontalScaling">Horizontal Scaling</label>
+            </div>
+
+            <label for="upload">4. Upload a link to a past web project (PDF/Screenshot):</label>
+            <input type="file" id="upload" name="upload" accept=".pdf,.jpg,.png">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
