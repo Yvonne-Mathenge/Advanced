@@ -1,61 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USIU Advanced Web Development Evaluation Form</title>
-    <link rel="stylesheet" href="style.css">
+  <title>USIU Advanced Web Development Evaluation Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 5px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+
+    .question {
+      margin-bottom: 15px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>USIU Advanced Web Development Evaluation Form</h1>
+  <h1>USIU Advanced Web Development Evaluation Form</h1>
 
-        <form action="#" method="POST" enctype="multipart/form-data">
-            <label for="fullName">Full Name:</label>
-            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-
-            <label for="studentID">Student ID:</label>
-            <input type="text" id="studentID" name="studentID" placeholder="Enter your USIU Student ID" required>
-
-            <label for="email">USIU Email Address:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your USIU email" required>
-
-            <label for="github">GitHub Profile URL:</label>
-            <input type="url" id="github" name="github" placeholder="Enter your GitHub profile URL" required>
-
-            <label for="phone">Local Phone Number (WhatsApp-enabled):</label>
-            <input type="tel" id="phone" name="phone" placeholder="+2547XX-XXX-XXX" required>
-
-            <label for="problemSolving">1. Nairobi-Specific Problem Solving:</label>
-            <textarea id="problemSolving" name="problemSolving" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
-
-            <label for="jsFramework">2. Select the best JavaScript framework for real-time Nairobi news aggregation:</label>
-            <select id="jsFramework" name="jsFramework">
-                <option value="React.js">React.js</option>
-                <option value="Vue.js">Vue.js</option>
-                <option value="Angular">Angular</option>
-                <option value="Svelte">Svelte</option>
-            </select>
-
-            <label>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</label>
-            <div class="radio-group">
-                <input type="radio" id="databaseCaching" name="laravelOptimization" value="Database Caching">
-                <label for="databaseCaching">Database Caching</label>
-
-                <input type="radio" id="jobScheduling" name="laravelOptimization" value="Queues & Job Scheduling" checked>
-                <label for="jobScheduling">Queues & Job Scheduling</label>
-
-                <input type="radio" id="horizontalScaling" name="laravelOptimization" value="Horizontal Scaling">
-                <label for="horizontalScaling">Horizontal Scaling</label>
-            </div>
-
-            <label for="upload">4. Upload a link to a past web project (PDF/Screenshot):</label>
-            <input type="file" id="upload" name="upload" accept=".pdf,.jpg,.png">
-
-            <button type="submit">Submit</button>
-        </form>
+  <form>
+    <div class="form-group">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" name="fullName" placeholder="Enter your full name">
     </div>
+
+    <div class="form-group">
+      <label for="studentId">Student ID:</label>
+      <input type="text" id="studentId" name="studentId" placeholder="Enter your USIU Student ID">
+    </div>
+
+    <div class="form-group">
+      <label for="usiuEmail">USIU Email Address:</label>
+      <input type="email" id="usiuEmail" name="usiuEmail" placeholder="Enter your USIU email">
+    </div>
+
+    <div class="form-group">
+      <label for="gitHubProfile">GitHub Profile URL:</label>
+      <input type="url" id="gitHubProfile" name="gitHubProfile" placeholder="Enter your GitHub profile URL">
+    </div>
+
+    <div class="form-group">
+      <label for="phoneNumber">Local Phone Number (WhatsApp-enabled):</label>
+      <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="+2547XX-XXX-XXX" pattern="\+2547[0-9]{9}"> 
+    </div>
+
+    <div class="question">
+      <h2>1. Nairobi-Specific Problem Solving:</h2>
+      <textarea rows="5" placeholder="Describe your API security and scalability solution for Nairobi matatu integration"></textarea>
+    </div>
+
+    <div class="question">
+      <h2>2. Select the best JavaScript framework for real-time Nairobi news aggregation:</h2>
+      <select>
+        <option value="react">React.js</option>
+        <option value="vue">Vue.js</option>
+        <option value="angular">Angular</option>
+      </select>
+    </div>
+
+    <div class="question">
+      <h2>3. Which Laravel optimization method is best for a Nairobi e-commerce startup?</h2>
+      <label><input type="radio" name="optimizationMethod" value="databaseCaching"> Database Caching</label><br>
+      <label><input type="radio" name="optimizationMethod" value="queuesJobs"> Queues & Job Scheduling</label><br>
+      <label><input type="radio" name="optimizationMethod" value="horizontalScaling"> Horizontal Scaling</label>
+    </div>
+
+    <div class="question">
+      <h2>4. Upload a link to a past web project (PDF/Screenshot):</h2>
+      <input type="file" id="projectFile" name="projectFile">
+    </div>
+
+  </form>
 
 </body>
 </html>
