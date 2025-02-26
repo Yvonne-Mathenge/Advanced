@@ -1,0 +1,87 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif; /* Example font, choose your preference */
+    margin: 0; /* Remove default body margin */
+    background-color: #f8f8f8; /* Light background color */
+    color: #333; /* Dark text color for contrast */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer sticks to bottom */
+}
+
+header {
+    background-color: #333; /* Dark header background */
+    color: #fff; /* White header text */
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+nav {
+    background-color: #eee; /* Light navigation background */
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Center the menu items */
+}
+
+nav li {
+    display: inline; /* Make list items horizontal */
+    margin: 0 15px; /* Add spacing between items */
+}
+
+nav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #333;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* Allow main content to take up available space */
+}
+
+.welcome {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Space between image and text */
+}
+
+.welcome img {
+    max-width: 40%; /* Make image responsive */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the image */
+}
+
+.welcome p {
+    text-align: justify; /* Justify the paragraph text */
+    flex: 1; /* Allow text to take up remaining space */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px; /* Add some space above the footer */
+}
+
+/* Responsive adjustments (example) */
+@media (max-width: 768px) {
+    .welcome {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center;
+    }
+
+    .welcome img {
+        max-width: 80%;
+    }
+}
