@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle">Toggle Theme</button>
+    </nav>
+
+    <section id="home">
+        <div class="content">
+            <h1>Welcome!</h1>
+            <p id="greeting"></p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="content">
+            <h2>About Me</h2>
+            <img src="assets/images/profile.jpg" alt="Your Profile">
+            <p>Your bio and background info...</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="content">
+            <h2>Projects Portfolio</h2>
+            <div id="project-filters">
+                <button data-filter="all">All</button>
+                <button data-filter="web">Web</button>
+                <button data-filter="data">Data</button>
+                <button data-filter="ai">AI</button>
+            </div>
+            <div id="project-list">
+                </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <div class="content">
+            <h2>Blog</h2>
+            <div id="blog-list">
+                </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="web.js"></script>
+</body>
+</html>
