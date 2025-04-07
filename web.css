@@ -1,0 +1,62 @@
+// Dynamic Greeting
+function setGreeting() {
+    const now = new Date();
+    const hour = now.getHours();
+    let greeting;
+
+    if (hour < 12) {
+        greeting = "Good morning!";
+    } else if (hour < 18) {
+        greeting = "Good afternoon!";
+    } else {
+        greeting = "Good evening!";
+    }
+
+    document.getElementById("greeting").textContent = greeting;
+}
+
+// Form Validation
+document.getElementById("contact-form").addEventListener("submit", function(event) {
+    // Validation logic here
+});
+
+// Theme Toggle
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+
+function setTheme(theme) {
+    if (theme === "dark") {
+        body.classList.add("dark-mode");
+    } else {
+        body.classList.remove("dark-mode");
+    }
+    localStorage.setItem("theme", theme);
+}
+
+themeToggle.addEventListener("click", () => {
+    if (body.classList.contains("dark-mode")) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+const currentTheme = localStorage.getItem("theme");
+if (currentTheme) {
+    setTheme(currentTheme);
+}
+
+// Blog Manager (using JSON or JS array)
+async function loadBlogPosts() {
+    // Fetch or use array. Append to blog-list div
+}
+
+// Portfolio Filter
+function filterProjects(category) {
+    // Filter projects based on category
+}
+// Scrollspy and smooth scroll
+// Add active class to nav links, and handle smooth scrolling.
+
+// Advanced function examples.
+// Modal popups, image galleries, progress bars.
